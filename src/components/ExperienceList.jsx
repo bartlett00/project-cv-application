@@ -13,7 +13,7 @@ export default function ExperienceList() {
     setExpList(newExpList);
   }
   return (
-    <div className="schools-container">
+    <div className="experiences-container section-wrapper">
       {expList}
       <button onClick={handleAddExp}>+</button>
     </div>

@@ -1,8 +1,6 @@
 import { useState } from "react";
-import Edit from "./Edit";
-import Submit from "./Submit";
 import Input from "./Input";
-import "/src/styles/Form.css";
+import "/src/styles/General.css";
 
 export default function General() {
   const [firstName, setFirstName] = useState("");
@@ -44,7 +42,7 @@ export default function General() {
     return (
       <>
         {/* TODO: add div wrappers for styling later on. */}
-        <div className="personal-info">
+        <div className="personal-info-form form-container">
           <form onSubmit={handleSubmit}>
             <Input
               onChange={handleFirstNameChange}
@@ -75,7 +73,7 @@ export default function General() {
               id={"phone-number"}
             />
             <div className="form-btns">
-              <Submit />
+              <button type="submit">Submit</button>
             </div>
           </form>
         </div>
@@ -88,19 +86,8 @@ export default function General() {
         <h3>Contact Info</h3>
         <p className="email submitted">{email}</p>
         <p className="phone submitted">{phone}</p>
-        <Edit onClick={handleEdit} />
+        <button onClick={handleEdit}>Edit</button>
       </div>
     );
   }
 }
-
-// function Input({ label, onChange, value, type, id }) {
-//   return (
-//     <>
-//       <label htmlFor={id}>
-//         {label}
-//         <input type={type} id={id} value={value} onChange={onChange}></input>
-//       </label>
-//     </>
-//   );
-// }

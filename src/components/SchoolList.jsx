@@ -13,7 +13,7 @@ export default function EducationList() {
     setSchoolList(newSchoolList);
   }
   return (
-    <div className="schools-container">
+    <div className="schools-container section-wrapper">
       {schoolList}
       <button onClick={handleAddSchool}>+</button>
     </div>

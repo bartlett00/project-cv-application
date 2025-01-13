@@ -1,10 +1,22 @@
-form {
+.form-container {
   display: grid;
   grid-template-columns: min-content;
   justify-content: center;
   justify-items: center;
 }
 
+.form-container > form {
+}
+
+.submitted {
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  justify-content: start;
+  justify-items: center;
+  margin-left: 12px;
+}
+
 button {
   width: min-content;
+  justify-self: end;
 }

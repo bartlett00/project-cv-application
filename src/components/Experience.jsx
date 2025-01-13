@@ -56,7 +56,7 @@ export default function Experience() {
     return;
   } else if (!isSubmitted) {
     return (
-      <div className="exp-form">
+      <div className="exp-form form-container">
         <form onSubmit={handleSubmit}>
           <Input
             label={"Company Name: "}
@@ -84,8 +84,8 @@ export default function Experience() {
             onChange={handleSetEnd}
             value={experiences.dateEnd}
           />
+          <button onClick={handleSubmit}>Save</button>
         </form>
-        <button onClick={handleSubmit}>Save</button>
         <button onClick={handleDelete}>Delete</button>
       </div>
     );

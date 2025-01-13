@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Edit from "./Edit";
-import Submit from "./Submit";
 import Input from "./Input";
 import "/src/styles/Form.css";
 
@@ -54,7 +52,7 @@ export default function Education({ key }) {
     return;
   } else if (!isSubmitted) {
     return (
-      <div className="school-form" id={`school-${key}`}>
+      <div className="school-form form-container" id={`school-${key}`}>
         <form onSubmit={handleSubmit}>
           <Input
             type={"text"}
@@ -80,7 +78,7 @@ export default function Education({ key }) {
             label={"Date of End: "}
             value={studies.dateEnd}
           />
-          <Submit />
+          <button type="submit">Submit</button>
         </form>
         <button onClick={handleDelete}>Delete</button>
       </div>
@@ -90,9 +88,18 @@ export default function Education({ key }) {
       <div className="school-form submitted" id={`school-${key}`}>
         <h3 className="degree">{studies.study}</h3>
         <h4 className="school-name">{studies.school}</h4>
-        <p className="date-start">{studies.dateStart}</p>
-        <p className="date-end">{studies.dateEnd}</p>
-        <Edit onClick={handleEdit} />
+        {/* <p className="date-start">{studies.dateStart}</p>
+        <p className="date-end">{studies.dateEnd}</p> */}
+        <p>
+          {!studies.dateStart && !studies.dateEnd
+            ? ""
+            : studies.dateStart && studies.dateEnd
+            ? `${studies.dateStart} - ${studies.dateEnd}`
+            : !studies.dateEnd && studies.dateStart
+            ? `${studies.dateStart} -`
+            : `- ${studies.dateEnd}`}
+        </p>
+        <button onClick={handleEdit}>Edit</button>
       </div>
     );
   }
