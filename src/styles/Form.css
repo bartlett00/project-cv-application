@@ -1,0 +1,10 @@
+form {
+  display: grid;
+  grid-template-columns: min-content;
+  justify-content: center;
+  justify-items: center;
+}
+
+button {
+  width: min-content;
+}
