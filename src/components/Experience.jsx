@@ -2,21 +2,12 @@ import { useState } from "react";
 import Input from "./Input";
 
 export default function Experience() {
-  // const [experiences, setExperiences] = useState({
-  //   company: "",
-  //   title: "",
-  //   responsibilities: "",
-  //   dateStart: null,
-  //   dateEnd: null,
-  // });
-
-  //CSS placeholder state
   const [experiences, setExperiences] = useState({
-    company: "ACME Co.",
-    title: "Team Member",
-    responsibilities: "Lorem ipsum dolor semet.",
-    dateStart: "2021",
-    dateEnd: "2023",
+    company: "",
+    title: "",
+    responsibilities: "",
+    dateStart: null,
+    dateEnd: null,
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);

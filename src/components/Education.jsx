@@ -2,19 +2,11 @@ import { useState } from "react";
 import Input from "./Input";
 
 export default function Education({ key }) {
-  // const [studies, setStudies] = useState({
-  //   school: "",
-  //   study: "",
-  //   dateStart: "",
-  //   dateEnd: "",
-  // });
-
-  //CSS placeholder state
   const [studies, setStudies] = useState({
-    school: "University of Wisconsin Stout",
-    study: "Game Development and Design",
-    dateStart: "2019",
-    dateEnd: "2021",
+    school: "",
+    study: "",
+    dateStart: "",
+    dateEnd: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -59,8 +51,9 @@ export default function Education({ key }) {
   if (isDeleted) {
     return;
   } else if (!isSubmitted) {
+    console.log(key);
     return (
-      <div className="school-form form-container" id={`school-${key}`}>
+      <div className="school-form form-container" key={key}>
         <form onSubmit={handleSubmit}>
           <Input
             type={"text"}
@@ -93,11 +86,9 @@ export default function Education({ key }) {
     );
   } else {
     return (
-      <div className="school-form submitted list-item" id={`school-${key}`}>
+      <div className="school-form submitted list-item" key={key}>
         <h3 className="degree">{studies.study}</h3>
         <h4 className="school-name">{studies.school}</h4>
-        {/* <p className="date-start">{studies.dateStart}</p>
-        <p className="date-end">{studies.dateEnd}</p> */}
         <p>
           {!studies.dateStart && !studies.dateEnd
             ? ""

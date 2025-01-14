@@ -3,11 +3,10 @@ import Experience from "./Experience";
 
 export default function ExperienceList() {
   const [expList, setExpList] = useState([<Experience key={0} />]);
-  let id = 0;
 
   function handleAddExp() {
     let newExpList = [...expList];
-    id += 1;
+    const id = newExpList.length;
     let newExp = <Experience key={id} />;
     newExpList.push(newExp);
     setExpList(newExpList);

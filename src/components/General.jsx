@@ -2,16 +2,10 @@ import { useState } from "react";
 import Input from "./Input";
 
 export default function General() {
-  // const [firstName, setFirstName] = useState("");
-  // const [lastName, setLastName] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [phone, setPhone] = useState("");
-
-  //CSS placeholder state
-  const [firstName, setFirstName] = useState("Kat");
-  const [lastName, setLastName] = useState("Coder");
-  const [email, setEmail] = useState("test@test.com");
-  const [phone, setPhone] = useState("123 456 7890");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const nameFull = `${firstName} ${lastName}`;
@@ -87,8 +81,8 @@ export default function General() {
         <h3 className="name submitted">{nameFull}</h3>
         <div className="contact-info-container">
           <h3>Contact Info</h3>
-          <p className="email submitted">{email}</p>
-          <p className="phone submitted">{phone}</p>
+          <p className="email">{email}</p>
+          <p className="phone">{phone}</p>
           <button onClick={handleEdit}>Edit</button>
         </div>
       </div>
