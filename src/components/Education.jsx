@@ -1,14 +1,22 @@
 import { useState } from "react";
 import Input from "./Input";
-import "/src/styles/Form.css";
 
 export default function Education({ key }) {
+  // const [studies, setStudies] = useState({
+  //   school: "",
+  //   study: "",
+  //   dateStart: "",
+  //   dateEnd: "",
+  // });
+
+  //CSS placeholder state
   const [studies, setStudies] = useState({
-    school: "",
-    study: "",
-    dateStart: "",
-    dateEnd: "",
+    school: "University of Wisconsin Stout",
+    study: "Game Development and Design",
+    dateStart: "2019",
+    dateEnd: "2021",
   });
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
 
@@ -85,7 +93,7 @@ export default function Education({ key }) {
     );
   } else {
     return (
-      <div className="school-form submitted" id={`school-${key}`}>
+      <div className="school-form submitted list-item" id={`school-${key}`}>
         <h3 className="degree">{studies.study}</h3>
         <h4 className="school-name">{studies.school}</h4>
         {/* <p className="date-start">{studies.dateStart}</p>

@@ -1,0 +1,93 @@
+#root {
+  margin: 0.7rem;
+  display: grid;
+  max-width: 1000px;
+  min-width: 1000px;
+  grid-template-rows: 1fr;
+  justify-self: center;
+}
+
+/*
+    import fonts and clean up styling
+*/
+
+section {
+  border-top: 3px solid darkblue;
+  margin-bottom: 1rem;
+}
+
+.exper-section {
+  border-bottom: 3px solid darkblue;
+  padding-bottom: 1rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: min-content;
+  justify-content: center;
+  justify-items: center;
+  margin: 0.5rem;
+  gap: 0.5rem;
+}
+
+.submitted {
+  display: grid;
+  justify-content: start;
+  justify-items: center;
+  margin-left: 12px;
+}
+
+button {
+  width: min-content;
+  justify-self: end;
+}
+
+.name.submitted {
+  font-size: 3rem;
+  align-self: center;
+}
+
+.contact-info-container {
+  justify-items: start;
+  align-items: center;
+}
+
+h1.title {
+  font-size: 1.5rem;
+  justify-self: end;
+  font-style: italic;
+  color: gray;
+}
+
+h2 {
+  color: darkblue;
+}
+
+.personal-info.submitted {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list-wrapper,
+.personal-info-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1200px;
+}
+
+.list-wrapper > button {
+  height: 48px;
+  width: 48px;
+  align-self: center;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.list-item {
+  border: 2px solid black;
+  padding: 1rem;
+  background-color: aliceblue;
+}

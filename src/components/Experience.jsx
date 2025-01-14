@@ -1,15 +1,24 @@
 import { useState } from "react";
 import Input from "./Input";
-import "/src/styles/Form.css";
 
 export default function Experience() {
+  // const [experiences, setExperiences] = useState({
+  //   company: "",
+  //   title: "",
+  //   responsibilities: "",
+  //   dateStart: null,
+  //   dateEnd: null,
+  // });
+
+  //CSS placeholder state
   const [experiences, setExperiences] = useState({
-    company: "",
-    title: "",
-    responsibilities: "",
-    dateStart: null,
-    dateEnd: null,
+    company: "ACME Co.",
+    title: "Team Member",
+    responsibilities: "Lorem ipsum dolor semet.",
+    dateStart: "2021",
+    dateEnd: "2023",
   });
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
 
@@ -91,7 +100,7 @@ export default function Experience() {
     );
   } else {
     return (
-      <div className="exp-form submitted">
+      <div className="exp-form submitted list-item">
         <h3>{experiences.title}</h3>
         <h4>{experiences.company}</h4>
         <p>
